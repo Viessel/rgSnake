@@ -103,7 +103,7 @@ func spawnFood(food *Node) {
 func main() {
 	rl.InitWindow(WIDTH, HEIGHT, "raylib example")
 	defer rl.CloseWindow()
-	rl.SetTargetFPS(180)
+	rl.SetTargetFPS(10)
 
 	var direction Direction = Left
 	var head Node = Node{x: HEIGHT / 2, y: WIDTH / 2}
@@ -130,10 +130,10 @@ func main() {
 		rl.BeginDrawing()
 		rl.ClearBackground(rl.DarkGreen)
 		drawSnake(&head)
-		rl.DrawRectangle(food.x, food.y, STEP, STEP, rl.Gray)
+		rl.DrawRectangle(food.x, food.y, STEP, STEP, rl.DarkBlue)
 		if GAME_OVER == 1 {
       w := rl.MeasureText("GAME OVER", 100)
-			rl.DrawText("GAME OVER", (WIDTH - w)/2, HEIGHT/2, 100, rl.Red)
+			rl.DrawText("GAME OVER", (WIDTH - w)/2, HEIGHT/2-50, 100, rl.Red)
       rl.EndDrawing()
 			time.Sleep(5 * time.Second)
 			//    head.Restart()
@@ -146,7 +146,7 @@ func main() {
       GAME_OVER = 0
       continue
 		}
-		time.Sleep(150 * time.Millisecond)
+		//time.Sleep(150 * time.Millisecond)
 		rl.EndDrawing()
 	}
 }
