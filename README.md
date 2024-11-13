@@ -17,3 +17,6 @@ $ CGO_ENABLED=1 CC=x86_64-w64-mingw32-gcc GOOS=windows GOARCH=amd64 go build -ld
 # dnf install mingw32-gcc
 ```
 
+## Throubleshooting
+Check [Raylib bindings](https://github.com/gen2brain/raylib-go) repo for more help.
+
