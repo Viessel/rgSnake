@@ -3,7 +3,7 @@
 ## Building from linux
 ```bash
 $ go build .
-`
+```
 
 ## Cross compiling for windows 
 ```bash
